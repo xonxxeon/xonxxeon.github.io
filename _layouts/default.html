@@ -10,6 +10,9 @@
 -->
 <html lang="{{ site.locale | slice: 0,2 | default: "en" }}" class="no-js">
   <head>
+    <div class="progress-container">
+      <div class="progress-bar" id="indicator"></div>
+    </div>
     <style> 
       ::-webkit-scrollbar{ 
         width: 10px;
@@ -91,3 +94,11 @@
 
   </body>
 </html>
+
+<script> // 인터넷 스크롤 이동 시 이벤트 
+  window.onscroll = function() {createPrograssBar()}; 
+  function createPrograssBar() { 
+    var winScroll = document.body.scrollTop || document.documentElement.scrollTop;   var height = document.documentElement.scrollHeight - document.documentElement.clientHeight; 
+    var scrolled = (winScroll / height) * 100; document.getElementById("indicator").style.width = scrolled + "%"; 
+  } 
+</script> 
