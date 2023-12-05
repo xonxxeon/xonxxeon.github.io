@@ -5,33 +5,38 @@
   <input id="ac-toc" name="accordion-toc" type="checkbox" />
   <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle Menu" }}</label>
   <ul class="nav__items">
-    <!-- <li>
-      <span class="nav__total">🌴 Total Posts: {{site.posts | size}}</span>
-    </li> -->
+    <li>
+      <span class="nav__total">📋 전체 포스트 {{site.posts | size}} 개</span>
+    </li>
     
-    {% for nav in navigation %}
-      <li>
-        {% if nav.url %}
-              <a href="{{ nav.url | relative_url }}"><span class="nav__sub-title">{{ nav.title }}</span></a>
-        {% else %}
-          <!-- title -->
-              <span class="nav__sub-title">{{ nav.title }}</span>
-              <hr>
-        {% endif %}
+    <!--span 태그로 카테고리들을 크게 분류 ex) C/C++/C#-->
+    <span class="nav__sub-title">Web</span>
+    <!--ul 태그로 같은 카테고리들 모아둔 페이지들 나열-->
+    <ul>
+        <!--Cpp 카테고리 글들을 모아둔 페이지인 /categories/cpp 주소의 글로 링크 연결-->
+        <!--category[1].size 로 해당 카테고리를 가진 글의 개수 표시--> 
+        {% for category in site.categories %}
+            {% if category[0] == "JavaScript" %}
+                <li><a href="/categories/js" class="">JavaScript ({{category[1].size}})</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <span class="nav__sub-title">Coding Test</span>
+    <ul>
+        {% for category in site.categories %}
+            {% if category[0] == "baekjoon" %}
+                <li><a href="/categories/baekjoon" class="">백준 ({{category[1].size}})</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
+    <ul>
+        {% for category in site.categories %}
+            {% if category[0] == "programmers" %}
+                <li><a href="/categories/programmers" class="">프로그래머스 ({{category[1].size}})</a></li>
+            {% endif %}
+        {% endfor %}
+    </ul>
 
-        {% if nav.children != null %}
-        <ul>
-          {% for child in nav.children %}
-            <!-- sub-title -->
-            {% for category in site.categories %}
-              {% if category[0] == child.title %}
-                <li><a href="{{ child.url | relative_url }}"{% if child.url == page.url %} class="active"{% endif %}>{{ child.title }} ({{ category | last | size }})</a></li>
-              {% endif %}
-            {% endfor %}
-          {% endfor %}
-        </ul>
-        {% endif %}
-      </li>
-    {% endfor %}
+
   </ul>
 </nav>
