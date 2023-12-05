@@ -121,13 +121,13 @@ nav: "categories"
 # sidebar navigation (categories)
 categories:
   - title: "Categories1"
-    url: /categories/categories1/
+    url: /categories/categories1
   - title: "Categories2"
-    url: /categories/categories2/
+    url: /categories/categories2
   - title: "Categories3"
-    url: /categories/categories3/
+    url: /categories/categories3
   - title: "Categories4"
-    url: /categories/categories4/
+    url: /categories/categories4
 ```
 
 2022.09.24 Update : 하위 카테고리 포함 메뉴 (categories-ver2 branch)  
@@ -141,25 +141,25 @@ categories:
   - title: "Title1"
     children:
       - title: "Categories1"
-        url: /categories/categories1/
+        url: /categories/categories1
       - title: "Categories2"
-        url: /categories/categories2/
+        url: /categories/categories2
       - title: "Categories3"
-        url: /categories/categories3/
+        url: /categories/categories3
       - title: "Categories4"
-        url: /categories/categories4/
+        url: /categories/categories4
 
   - title: "Title2"
     children:
       - title: "Categories5"
-        url: /categories/categories5/
+        url: /categories/categories5
       - title: "Categories6"
-        url: /categories/categories6/
+        url: /categories/categories6
 
   - title: "Title3"
     children:
       - title: "Categories7"
-        url: /categories/categories7/
+        url: /categories/categories7
 ```
 
 ### ▪ 포스트 작성
