@@ -3,11 +3,11 @@ main:
   - title: "Home"
     url: https://xonxxeon.github.io/
 
-  - title: "About"
-    url: /about/
+  #- title: "About"
+  #  url: /about/
 
-  - title: "GitHub"
-    url: https://xonxxeon.github.io/
+  #- title: "GitHub"
+  #  url: https://xonxxeon.github.io/
 
   # - title: "Projects"
   #   url: /projects/
