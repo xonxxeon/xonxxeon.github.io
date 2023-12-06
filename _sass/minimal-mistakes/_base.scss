@@ -137,8 +137,11 @@ a {
   &:hover {
     color: $link-color-hover;
     outline: 0;
-    background: #1E1E1E;
   }
+}
+
+a.pagination_prev_next--pager:hover {
+  background: #1e1e1e;
 }
 
 /* buttons */
