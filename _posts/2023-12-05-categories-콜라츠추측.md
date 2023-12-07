@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /programmers/콜라츠추측
+permalink: /programmers/12943
 
 toc: true
 toc_sticky: true

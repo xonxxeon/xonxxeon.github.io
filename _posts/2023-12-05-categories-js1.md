@@ -7,7 +7,7 @@ categories:
 tags:
   - [tag1, tag2]
 
-permalink: /js/post-name-here-3
+permalink: /js/js1
 
 toc: true
 toc_sticky: true
